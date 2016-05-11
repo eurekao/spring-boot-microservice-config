@@ -1,32 +1,6 @@
 spring:
   profiles:
-    active: cloud
----
-
-spring:
-  profiles: cloud
-  cloud:
-    config:
-      discovery:
-        enabled: true
-server:
-  port: 8761
-endpoints:
-  restart:
-    enabled: true
-  shutdown:
-    enabled: true
-  health:
-    sensitive: false
-eureka:
-  instance:
-    hostname: discovery
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
-    serviceUrl:
-      defaultZone: http://discovery-kb.cfapps.io/eureka/
-
+    active: development
 ---
 
 spring:
@@ -47,4 +21,4 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://discovery:8761/eureka/
+      defaultZone: http://127.0.0.1:8761/eureka/
